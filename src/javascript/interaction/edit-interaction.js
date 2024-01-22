@@ -5,6 +5,7 @@ import { updateListDescription, updateListName, updateDueDate, updateImportant} 
 import { importantButtonModifyEventListener } from './important-interaction.js';
 import { getList } from '../index/modify.js';
 import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 import { removeInImportantContainer } from './important-interaction.js';
 import { getCurrentDate, isInThisWeek } from '../index/date.js';
 import { addInImportantContainer, addInTodayContainer, addInWeekContainer } from '../container/all-container.js';

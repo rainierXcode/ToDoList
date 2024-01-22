@@ -10,6 +10,9 @@ import { options } from '../interaction/option-interaction.js';
 import { editEvent } from '../interaction/edit-interaction.js';
 import { allAddProjectEvent } from '../container/projects.js';
 import { navBtn } from '../interaction/nav.js';
+import '../../css/style.css';
+
+
 
 export function list(id,listName, description, duedate, isImportant, categoryID, isDone){
     return{
