@@ -1,6 +1,7 @@
 import {  updateCheckBox } from "../index/modify.js";
 import { monitorAllCount } from "../index/modify.js";
-const audio = new Audio('/src/sound/checkbox.mp3');
+import checkboxSound from '/src/sound/checkbox.mp3';
+const audio = new Audio(checkboxSound);
 
 
 
