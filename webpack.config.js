@@ -1,12 +1,10 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/javascript/index/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'), // Change 'dist' to your preferred output directory
   },
   module: {
     rules: [
@@ -19,22 +17,9 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'assets/audio/',
+          outputPath: 'sound/', 
         },
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'src/icon', 
-          to: 'assets/icons', 
-        },
-      ],
-    }),
-  ],
 };

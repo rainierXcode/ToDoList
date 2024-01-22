@@ -82,6 +82,11 @@ aside.unShow{
   "article";
 }
 
+.header-container.unShow{
+  justify-content: flex-start;
+  gap: 15px
+}
+
 article{
   grid-area: article;
   padding: 50px 150px;
