@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <!-- <script type="module" src="../src/javascript/index/index.js" defer></script> -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+           <header>
+                <div class="header-container">
+                    <svg class="navBtn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 4.5C2 4.36739 2.05268 4.24021 2.14645 4.14645C2.24021 4.05268 2.36739 4 2.5 4H17.5C17.6326 4 17.7598 4.05268 17.8536 4.14645C17.9473 4.24021 18 4.36739 18 4.5C18 4.63261 17.9473 4.75979 17.8536 4.85355C17.7598 4.94732 17.6326 5 17.5 5H2.5C2.36739 5 2.24021 4.94732 2.14645 4.85355C2.05268 4.75979 2 4.63261 2 4.5ZM2 9.5C2 9.36739 2.05268 9.24021 2.14645 9.14645C2.24021 9.05268 2.36739 9 2.5 9H17.5C17.6326 9 17.7598 9.05268 17.8536 9.14645C17.9473 9.24021 18 9.36739 18 9.5C18 9.63261 17.9473 9.75979 17.8536 9.85355C17.7598 9.94732 17.6326 10 17.5 10H2.5C2.36739 10 2.24021 9.94732 2.14645 9.85355C2.05268 9.75979 2 9.63261 2 9.5ZM2.5 14C2.36739 14 2.24021 14.0527 2.14645 14.1464C2.05268 14.2402 2 14.3674 2 14.5C2 14.6326 2.05268 14.7598 2.14645 14.8536C2.24021 14.9473 2.36739 15 2.5 15H17.5C17.6326 15 17.7598 14.9473 17.8536 14.8536C17.9473 14.7598 18 14.6326 18 14.5C18 14.3674 17.9473 14.2402 17.8536 14.1464C17.7598 14.0527 17.6326 14 17.5 14H2.5Z" fill="#2C2C2C"/>
+                        </svg>
+                        
+                    <div class="title-container">
+                        <span id="main-title">ToDoList</span>
+                        <span id="icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 0H7.5C3.35786 0 0 3.35786 0 7.5V18C0 22.1421 3.35786 25.5 7.5 25.5H18C22.1421 25.5 25.5 22.1421 25.5 18V7.5C25.5 3.35786 22.1421 0 18 0Z" fill="#2196F3"/>
+                            <path d="M18 30H9C8.60218 30 8.22064 29.842 7.93934 29.5607C7.65804 29.2794 7.5 28.8978 7.5 28.5C7.5 28.1022 7.65804 27.7206 7.93934 27.4393C8.22064 27.158 8.60218 27 9 27H18C20.3861 26.9972 22.6737 26.0481 24.3609 24.3609C26.0481 22.6737 26.9972 20.3861 27 18V9C27 8.60218 27.158 8.22064 27.4393 7.93934C27.7206 7.65804 28.1022 7.5 28.5 7.5C28.8978 7.5 29.2794 7.65804 29.5607 7.93934C29.842 8.22064 30 8.60218 30 9V18C29.996 21.1814 28.7305 24.2313 26.4809 26.4809C24.2313 28.7305 21.1814 29.996 18 30Z" fill="#01579B"/>
+                            <path d="M10.41 17.523C10.3605 17.523 10.311 17.52 10.26 17.5155C10.049 17.4943 9.84493 17.4286 9.66132 17.3225C9.47771 17.2165 9.31874 17.0726 9.19496 16.9005L6.28496 12.879C6.16424 12.7198 6.07654 12.538 6.02702 12.3444C5.9775 12.1509 5.96715 11.9493 5.9966 11.7517C6.02604 11.5541 6.09467 11.3643 6.19846 11.1935C6.30225 11.0228 6.43911 10.8745 6.601 10.7574C6.7629 10.6403 6.94656 10.5567 7.1412 10.5115C7.33585 10.4664 7.53756 10.4605 7.73448 10.4944C7.93141 10.5283 8.11958 10.6012 8.28796 10.7087C8.45633 10.8163 8.60151 10.9565 8.71496 11.121L10.632 13.773L16.9815 7.89898C17.1261 7.76523 17.2958 7.66129 17.4806 7.59309C17.6655 7.52488 17.8619 7.49376 18.0588 7.50149C18.2557 7.50922 18.4491 7.55566 18.6281 7.63814C18.807 7.72063 18.968 7.83755 19.1017 7.98223C19.2355 8.12692 19.3394 8.29653 19.4076 8.48138C19.4758 8.66624 19.5069 8.86272 19.4992 9.0596C19.4915 9.25648 19.445 9.44992 19.3626 9.62886C19.2801 9.80779 19.1631 9.96873 19.0185 10.1025L11.4285 17.124C11.1509 17.3808 10.7881 17.5233 10.41 17.523Z" fill="#E1F5FE"/>
+                            <path d="M12 0V25.5H7.5C5.51112 25.4992 3.60393 24.7088 2.19758 23.3024C0.791227 21.8961 0.000795075 19.9889 0 18V7.5C0.000795075 5.51112 0.791227 3.60393 2.19758 2.19758C3.60393 0.791227 5.51112 0.000795075 7.5 0H12Z" fill="#29B6F6"/>
+                            <path d="M12 27V30H9C8.60218 30 8.22064 29.842 7.93934 29.5607C7.65804 29.2794 7.5 28.8978 7.5 28.5C7.5 28.1022 7.65804 27.7206 7.93934 27.4393C8.22064 27.158 8.60218 27 9 27H12Z" fill="#3E54D3"/>
+                            <path d="M12 12.51V16.605C11.3475 17.2065 11.1405 17.52 10.26 17.52C10.0498 17.4963 9.84663 17.4294 9.66337 17.3236C9.48012 17.2178 9.32068 17.0753 9.19504 16.905L6.28504 12.885C6.05032 12.5627 5.95323 12.1605 6.01512 11.7666C6.077 11.3728 6.2928 11.0197 6.61504 10.785C6.93728 10.5503 7.33956 10.4532 7.73339 10.5151C8.12721 10.5769 8.48032 10.7927 8.71504 11.115L10.635 13.77L12 12.51Z" fill="#E1F5FE"/>
+                            </svg>
+                            </span>
+                    </div>
+                </div>
+           </header>
+
+
+           <aside>
+                <nav>
+                    <ul class="navbar">
+                        <li class="current-nav inbox" data-container="inbox-container">
+                            <div class="nav-logo-and-name">
+                                <div><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>                                
+                                </div>
+                                <div class="nav-name">Inbox</div>
+                            </div>
+
+                            <div class="count"></div>
+                        </li>
+
+                        <li data-container="today-container" class="today">
+                            <div class="nav-logo-and-name">
+                                <div><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>                               
+                                </div>
+                                <div class="nav-name">Today</div>
+                            </div>
+
+                            <div class="count"></div>
+                        </li>
+
+
+                        <li data-container="thisweek-container" class="thisweek">
+                            <div class="nav-logo-and-name">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" fill-opacity=".25" d="M3 10c0-1.886 0-2.828.586-3.414C4.172 6 5.114 6 7 6h10c1.886 0 2.828 0 3.414.586C21 7.172 21 8.114 21 10z"/><rect width="18" height="15" x="3" y="6" stroke="currentColor" stroke-width="1.2" rx="2"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.2" d="M7 3v3m10-3v3"/><rect width="4" height="2" x="7" y="12" fill="currentColor" rx=".5"/><rect width="4" height="2" x="7" y="16" fill="currentColor" rx=".5"/><rect width="4" height="2" x="13" y="12" fill="currentColor" rx=".5"/><rect width="4" height="2" x="13" y="16" fill="currentColor" rx=".5"/></g></svg>
+                                </div>
+                                <div class="nav-name">This Week</div>
+                            </div>
+
+                            <div class="count"></div>
+                        </li>
+
+                        
+                        <li data-container="overdue-container" class="overdue">
+                            <div class="nav-logo-and-name">
+                                <div><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                </div>
+                                <div class="nav-name">Overdue</div>
+                            </div>
+
+                            <div class="count"></div>
+                        </li>
+
+
+                        <li data-container="important-container" class="important-li">
+                            <div class="nav-logo-and-name">
+                                <div><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                </div>
+                                <div class="nav-name">Important</div>
+                            </div>
+
+                            <div class="count"></div>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="project-container">
+                        <div class="project-text-container">
+                            <div class="project-text">My Project</div>
+                            <div class="project-buttons">
+                                <svg class="projectPlus" viewBox="0 0 24 24" width="16" height="16" stroke="#2C2C2C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                <svg class="showBtn" viewBox="0 0 24 24" width="16" height="16" stroke="#2C2C2C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                        </div>
+
+                        <div class="add-project-container">
+                            <div class="project-input-container">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.885 10.23L12 3.463l4.115 6.769zm9.615 11q-1.567 0-2.65-1.08q-1.08-1.083-1.08-2.65t1.08-2.649q1.083-1.082 2.65-1.082t2.65 1.082q1.08 1.082 1.08 2.649t-1.081 2.65q-1.082 1.08-2.649 1.08m-13.73-.5v-6.46h6.46v6.46zm13.73-.5q1.146 0 1.938-.791q.793-.792.793-1.938q0-1.147-.792-1.94q-.792-.792-1.938-.792q-1.147 0-1.94.792q-.792.792-.792 1.938q0 1.147.792 1.94q.792.792 1.938.792m-12.73-.5h4.462v-4.462H4.769zm4.858-10.5h4.746L12 5.427zM17.5 17.5"></path></svg></span>
+                                <input type="text" id="input-project" placeholder="Project Name" autocomplete="off">
+                            </div>
+                            <div class="project-cancel-add-container">
+                                <button id="project-add-button">Add</button>
+                                <button id="project-cancel-button">Cancel</button>
+                            </div>
+                        </div>
+
+                        <ul class="all-project">
+                         
+                        </ul>
+                    </div>
+                </nav>
+           </aside>
+
+           <article>
+                <div class="inbox-container container current-container">
+                    <div class="inbox-text container-text">Inbox</div>
+
+                    <ul class="inbox-list list">
+                      
+                    </ul>
+
+                    <div class="add-task-container">
+                        <button class="add-task-button">
+                            <div class="add-task-button-container"><svg viewBox="0 0 24 24" width="18" height="18" stroke="#3E54D3" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                            <span class="add-task-text">Add task</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="today-container container">
+                    <div class="today-text container-text">Today</div>
+
+                    <ul class="today-list list">
+
+                    </ul>
+                </div>
+
+                <div class="thisweek-container container">
+                    <div class="thisweek-text container-text">This Week</div>
+
+                    <ul class="thisweek-list list">
+
+                    </ul>
+                </div>
+
+                <div class="overdue-container container">
+                    <div class="overdue-text container-text">Overdue</div>
+
+                    <ul class="overdue-list list">
+
+                    </ul>
+                </div>
+
+                <div class="important-container container">
+                    <div class="important-text container-text">Important</div>
+
+                    <ul class="important-list list">
+
+                    </ul>
+                </div>
+           </article>
+    </div>
+
+</body>
+</html>
