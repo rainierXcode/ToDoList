@@ -1,6 +1,9 @@
 # :clipboard: TODOLIST
 Discover an efficient and user-friendly to-do list application created as part of the Odin Project's curriculum. This interactive task management tool boasts a variety of features and leverages a modern tech stack to deliver a seamless user experience.
 
+## LIVE DEMO:
+:link:[ ToDoList Website](https://rainierxcode.github.io/ToDoList/)
+
 ## KEY FEATURES:
 **Responsive Design**:
 Experience the to-do list effortlessly on any device with its responsive design. Whether you're on a desktop, tablet, or smartphone, the application adapts to your screen size for optimal usability.
@@ -16,3 +19,7 @@ Take control of your tasks by prioritizing them. Highlight important items or ca
 * **JAVASCRIPT**
 * **HTML**
 * **CSS**
+
+## DOCUMENTATION 
+![Desktop Screenshot](src/screenshots/image1.png)
+![Mobile Screenshot](src/screenshots/image2.jpg)
