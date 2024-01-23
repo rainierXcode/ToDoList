@@ -719,3 +719,12 @@ nav{
   }
 }
 
+@media screen and (max-width: 430px) {
+  article{
+    padding: 50px 10px;
+  }
+
+  article.unShow{
+    padding-left: 10px;
+  }
+}
