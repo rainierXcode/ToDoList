@@ -678,6 +678,8 @@ nav{
 
 @media screen and (max-width: 1200px) {
 
+  
+
   .list{
     width: calc(100vw - 80px)
   }
@@ -689,8 +691,12 @@ nav{
     "article";
   }
   article{
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  article.unShow{
+    padding-left: 40px;
   }
 }
 
@@ -706,6 +712,10 @@ nav{
     box-sizing: border-box;
   }
 
+  article.unShow{
+    padding-left: 40px;
+  }
+
 }
 
 @media screen and (max-width: 430px) {
@@ -713,5 +723,8 @@ nav{
     padding: 50px 10px;
   }
 
- 
+  article.unShow{
+    padding-left: 10px;
+  }
+
 }
