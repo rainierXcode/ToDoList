@@ -95,25 +95,17 @@ article.unShow{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gaP: 20px;
   height: 100%;
   padding-left: 20px;
   box-sizing: border-box;
 }
 
-.header-container.unShow{
-  gap: 10px
-}
-
-.title-container.unShow{
-  transform: translateX(0);
-}
 
 .title-container{
   display: flex;
   align-items: center;
   gap:5px;
-  transform: translateX(100%);
-  transition: transform 500ms ease-in;
 }
 
 
@@ -714,9 +706,6 @@ nav{
     box-sizing: border-box;
   }
 
-  article.unShow{
-    padding-left: 40px;
-  }
 }
 
 @media screen and (max-width: 430px) {
@@ -724,7 +713,5 @@ nav{
     padding: 50px 10px;
   }
 
-  article.unShow{
-    padding-left: 10px;
-  }
+ 
 }
