@@ -90,3 +90,4 @@ allAddProjectEvent()
 plusButtonAddTask(document.querySelector('.add-task-container'))
 projectsShowButtonEvent()
 navBtn()
+
