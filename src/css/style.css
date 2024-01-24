@@ -681,7 +681,7 @@ nav{
   
 
   .list{
-    width: calc(100vw - 80px)
+    width: calc(100vw - 200px)
   }
 
   .main-container{
@@ -691,12 +691,13 @@ nav{
     "article";
   }
   article{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
   }
 
   article.unShow{
-    padding-left: 40px;
+    padding-left: 100px;
   }
 }
 
@@ -708,12 +709,16 @@ nav{
 
   article{
     width: 100vw;
-    padding: 50px 40px;
+    padding: 50px 70px;
     box-sizing: border-box;
   }
 
   article.unShow{
     padding-left: 40px;
+  }
+
+  .option-container{
+    left: 0%;
   }
 
 }
@@ -725,6 +730,16 @@ nav{
 
   article.unShow{
     padding-left: 10px;
+  }
+
+  .option-container{
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .option-container .edit-text, .option-container .delete-text{
+    display: none;
   }
 
 }
